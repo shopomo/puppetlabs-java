@@ -192,7 +192,7 @@ define java::oracle (
         source       => "${oracle_url}${release_major}-${release_minor}/${package_name}",
         cleanup      => false,
         extract_path => '/tmp',
-        cookie       => 'gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie',
+        cookie       => 'gpw_e24=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjdk8-downloads-2133151.html; oraclelicense=accept-securebackup-cookie',
       }->
       case $::kernel {
         'Linux' : {
