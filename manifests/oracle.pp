@@ -101,13 +101,13 @@ define java::oracle (
     }
     '8' : {
       $release_major = '8u144'
-      $release_minor = 'b16'
-      $install_path = "${java_se}1.8.0_51"
+      $release_minor = 'b01'
+      $install_path = "${java_se}1.8.0_144"
     }
     default : {
-      $release_major = '8u51'
-      $release_minor = 'b16'
-      $install_path = "${java_se}1.8.0_51"
+      $release_major = '8u144'
+      $release_minor = 'b01'
+      $install_path = "${java_se}1.8.0_144"
     }
   }
 
@@ -189,7 +189,7 @@ define java::oracle (
     'present' : {
       archive { $destination :
         ensure       => present,
-        source       => "${oracle_url}${release_major}-${release_minor}/${package_name}",
+        source       => "${oracle_url}/${package_name}",
         cleanup      => false,
         extract_path => '/tmp',
         cookie       => 'gpw_e24=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Fjava%2Fjavase%2Fdownloads%2Fjdk8-downloads-2133151.html; oraclelicense=accept-securebackup-cookie',
